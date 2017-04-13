@@ -2,7 +2,10 @@
 
 import twata
 
-t = twata.Twata()
-t.get_files()
-t.read_image()
+def main():
+    t = twata.Twata()
+    t.get_files()
+    t.read_image()
 
+if __name__ == "__main__":
+    main()

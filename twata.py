@@ -66,6 +66,8 @@ class Twata:
     def read_image(self):
         os.chdir(self.IMG_IN_DIR)   ## we should allready be here
         for filename in os.listdir('.'):
+            if filename.startswith('.'):
+                continue
             image = Image.open(filename)
             image.load()
             codes = zbarlight.scan_codes('qrcode', image)
